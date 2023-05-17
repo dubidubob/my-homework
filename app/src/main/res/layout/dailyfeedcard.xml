@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/feeling"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/ic_face"
+                    />
+
+                <TextView
+                    android:id="@+id/titleday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@id/feeling"
+                    app:layout_constraintTop_toTopOf="@id/feeling"
+                    app:layout_constraintBottom_toBottomOf="@id/feeling"
+                    android:text="첫번째 기록"
+                    android:layout_margin="10dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+                <ImageButton
+                    android:id="@+id/more"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_menu"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/feeling"
+                    app:layout_constraintBottom_toBottomOf="@id/feeling"
+                    android:layout_marginRight="20dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/firstImage"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/ex_cloud"
+                    app:layout_constraintRight_toLeftOf="@id/secondImage"
+                    app:layout_constraintTop_toTopOf="@id/secondImage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"/>
+
+                <ImageView
+                    android:id="@+id/secondImage"
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/ex_sky"
+                    app:layout_constraintRight_toRightOf="@id/more"
+                    app:layout_constraintTop_toBottomOf="@id/more"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
