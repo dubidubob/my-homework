@@ -116,7 +116,7 @@
     <LinearLayout
         android:id="@+id/scroll"
         app:layout_constraintTop_toBottomOf="@+id/reviewFinal"
-        app:layout_constraintBottom_toTopOf="@id/addDaily"
+        app:layout_constraintBottom_toTopOf="@id/underbar"
         android:layout_width="match_parent"
         android:layout_height="00dp">
         <ScrollView
@@ -132,6 +132,64 @@
         </ScrollView>
     </LinearLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/underbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/button_goHome"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_home"
+            android:background="@android:color/holo_purple" />
+
+        <ImageButton
+            android:id="@+id/button_goMyArchive"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_goHome"
+            android:src="@drawable/ic_archive"
+            android:background="@android:color/holo_purple" />
+
+
+        <ImageButton
+            android:id="@+id/button_goCommunity"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_goMyPage"
+            android:src="@drawable/ic_sns"
+            android:background="@android:color/holo_purple" />
+
+        <ImageButton
+            android:id="@+id/button_goMyPage"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_people"
+            android:background="@android:color/holo_purple"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageButton
         android:id="@+id/addDaily"
@@ -143,4 +201,6 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginBottom="15dp"
         />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
