@@ -95,7 +95,6 @@ public class demo extends Activity {
                     //flag true라면 해당 DB에 있는 내용 text를 조금만 보여준다(text 변수 따로 만들 것.)
                     textFinal.setText("밤은 다시 길고 깊어졌네\n" +
                             "나는 점점 너로 잠 못 들게 돼...");
-                    textFinal.setVisibility(View.VISIBLE);
                     flagFinal=true;
                 }else{
                     //flag true라면 해당 DB에 있는 내용 text를 보여준다.
